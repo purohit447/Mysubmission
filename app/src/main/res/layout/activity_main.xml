@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backbtn"
+            android:layout_width="30dp"
+            android:layout_height="26dp"
+            android:layout_margin="25dp"
+            android:background="@drawable/ic_baseline_west_24"></ImageButton>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Complete Your Profile"
+            android:textSize="25dp"
+            android:layout_margin="15dp"></TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Adding these details will help us better understand your medical condition."
+            android:textSize="15dp"
+            android:layout_margin="15dp"></TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HEIGHT"
+                android:layout_marginRight="20dp"
+                android:textStyle="bold|italic"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:layout_width="wrap_content"
+                android:id="@+id/switch1"
+                style="@style/Widget.Material3.CompoundButton.Switch"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/topLayout"
+        android:layout_height="120dp">
+        <com.elsunhoty.rulerpicker.lib.RulerView
+            android:id="@+id/centimeter"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13"
+            app:ruler_hash_mark_distance="10dp"
+            app:ruler_hash_mark_interval="10"
+            app:ruler_indicator_color="#73FF7474"
+            app:ruler_indicator_height="80dp"
+            app:ruler_indicator_width="2dp"
+            app:ruler_long_hash_mark_color="#FFFFFF"
+            app:ruler_long_hash_mark_height="40dp"
+            app:ruler_long_hash_mark_text_color="#BFBFBF"
+            app:ruler_long_hash_mark_text_margin_top="16dp"
+            app:ruler_long_hash_mark_text_size="20sp"
+            app:ruler_long_hash_mark_width="2dp"
+            app:ruler_max_value="300"
+            app:ruler_small_hash_mark_color="#CFCFCF"
+            app:ruler_small_hash_mark_height="30dp"
+            app:ruler_small_hash_mark_width="1dp"/>
+
+        <com.elsunhoty.rulerpicker.lib.RulerView
+            android:id="@+id/inches"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13"
+            app:ruler_hash_mark_distance="10dp"
+            app:ruler_hash_mark_interval="3"
+            app:ruler_indicator_color="#73FF7474"
+            app:ruler_indicator_height="80dp"
+            app:ruler_indicator_width="2dp"
+            app:ruler_long_hash_mark_color="#FFFFFF"
+            app:ruler_long_hash_mark_height="40dp"
+            app:ruler_long_hash_mark_text_color="#BFBFBF"
+            app:ruler_long_hash_mark_text_margin_top="16dp"
+            app:ruler_long_hash_mark_text_size="9sp"
+            app:ruler_long_hash_mark_width="2dp"
+            app:ruler_max_value="300"
+            app:ruler_small_hash_mark_color="#CFCFCF"
+            app:ruler_small_hash_mark_height="30dp"
+            app:ruler_small_hash_mark_width="1dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/profileCompletion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#f2f2f2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Profile Completion"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="30%"
+                android:textColor="@color/teal_700"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_margin="10dp"
+                android:progress="30">
+                <!--                android:progressDrawable="@drawable/coustem_bar"-->
+            </ProgressBar>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/signupButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/buttonsbackground"
+            android:text="Next"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/backgroundbar">
+        <shape android:shape="rectangle">
+            <size android:height="2dp">
+
+            </size>
+            <corners android:radius="8dp">
+            </corners>
+            <solid android:color="@color/teal_700">
+            </solid>
+
+        </shape>
+    </item>
+
+    <item android:id="@+id/progress">
+        <scale android:scaleWidth="100%">
+            <shape android:shape="rectangle">
+                <size android:height="2dp"
+                      android:width="3dp">
+
+                </size>
+                <corners android:radius="6dp">
+                </corners>
+                <solid android:color="@color/teal_700">
+                </solid>
+
+            </shape>
+        </scale>
+    </item>
+</layer-list>
